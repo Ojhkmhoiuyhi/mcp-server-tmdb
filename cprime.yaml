@@ -1,0 +1,20 @@
+config_schema:
+    type: object
+    required:
+        - tmdb_api_key
+    properties:
+        tmdb_api_key:
+            type: string
+            description: WE need this
+server_name: tmdbmcp
+description: A tool to access TMDB API
+license: MIT
+owner: Aaron Bockelie <aaronsb@gmail.com>
+package: TargetProcessMCP
+command: npx
+args:
+    - -y
+    - '@mseep/mcp-server-tmdb'
+env:
+    - name: TMDB_API_KEY
+      value: config.tmdb_api_key
